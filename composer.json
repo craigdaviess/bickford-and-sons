@@ -1,0 +1,18 @@
+{
+    "require": {
+        "silex/silex": "~1.2",
+        "symfony/twig-bridge": "~2.6",
+        "herrera-io/silex-active-link": "~1.0",
+        "symfony/form": "^2.7",
+        "symfony/validator": "^2.7",
+        "symfony/config": "^2.7",
+        "symfony/translation": "^2.7",
+        "symfony/security-csrf": "^2.7",
+        "phpmailer/phpmailer": "^5.2",
+        "doctrine/dbal": "^2.5"
+    },
+    "autoload": {
+      "psr-0": { "Cobalt": "src/" }
+    }
+
+}

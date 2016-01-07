@@ -1,0 +1,183 @@
+
+.foodland {
+  body {
+    background: #f9f4e1;
+  }
+
+  // nav {
+  //   position: relative;
+  //   background: rgba(0,0,0,0.7);
+  //   @media #{$small-up} {
+  //     padding: 5px 0;
+  //   }
+
+  //   .nav-home {
+  //     @media #{$xsmall-only} {
+  //       display: none;
+  //     }
+  //     width: 108px; // 9%
+  //     margin: 0 40px 0 10px;
+  //   }
+  //   .nav-story {
+  //     width: 60%;
+  //     @media #{$small-up} {
+  //       width: 74px; // 6.2%
+  //     }
+  //   }
+  //   .nav-classic {
+  //     width: 51%;
+  //     @media #{$small-up} {
+  //       width: 60px; // 5%
+  //     }
+  //   }
+  //   .nav-sparkling {
+  //     width: 73%;
+  //     @media #{$small-up} {
+  //       width: 90px; // 7.5%
+  //     }
+  //   }
+  //   .nav-movers {
+  //     width: 53%;
+  //     @media #{$small-up} {
+  //       width: 60px; // 5%
+  //     }
+  //   }
+  //   .nav-office {
+  //     width: 47%;
+  //     @media #{$small-up} {
+  //       width: 54px; // 4.5%
+  //     }
+  //   }
+  // }
+
+
+  .foodland-promotion {
+    position: relative;
+    padding-top: 50px;
+    @media #{$xsmall-only} {
+      padding: 0 10px;
+    }
+
+    .f-corner {
+      position: absolute;
+      width: 100px;
+      left: 0;
+      top: 20px;
+      z-index: 2;
+      @media #{$xsmall-only} {
+        display: none;
+      }
+    }
+    .f-bottle {
+      margin-top: 40px;
+      @media #{$xsmall-only} {
+        display: none;
+      }
+    }
+    .f-headline {
+      font-family: $brom;
+      font-size: 35px;
+      text-align: center;
+      padding-top: 90px;
+      @media #{$small-up} {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 22px;
+      }
+      @media #{$medium-up} {
+        font-size: 35px;
+      }
+      span {
+        font-size: 50px;
+        @media #{$small-up} {
+          font-size: 28px;
+        }
+        @media #{$medium-up} {
+          font-size: 80px;
+        }
+      }
+    }
+
+    .f-bbq {
+
+    }
+    .f-range {
+      @media #{$small-up} {
+        padding-top: 10px;
+        padding-bottom: 40px;
+      }
+    }
+    .f-logo {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .f-desc2 {
+      .down-arrow {
+        right: 0;
+      }
+    }
+
+    form#foodland-form {
+      margin-bottom: 70px;
+      @media #{$xsmall-only} {
+        padding: 0;
+      }
+      .hide-item {
+        display: none;
+      }
+      input {
+        margin-bottom: 0;
+      }
+      .form-item {
+        margin-bottom: 1rem;
+      }
+      label {
+        color: $black;
+        &:after {
+          content: '*';
+          color: #F00;
+          font-size: 16px;
+          visibility: hidden;
+        }
+        &.req:after {
+          visibility: visible;
+        }
+      }
+      .form_agree {
+        .row {
+          padding: 1em;
+        }
+        input[type=checkbox] {
+          width: 25px;
+          height: 25px;
+        }
+        label {
+          margin: 0;
+        }
+      }
+      .rec-warning {
+        color: #FF9900;
+      }
+      .fav-option {
+        display: block;
+        padding-top: 5px;
+        input {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          padding-right: 3px;
+          vertical-align: top;
+        }
+      }
+      button {
+        border-radius: 5px;
+        padding: 10px 25px;
+        margin: 10px 0;
+        font-family: $droid;
+        font-size: 20px;
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,132 @@
+{% extends "layout.twig" %}
+
+{% block meta %}
+  <meta property="og:title" content="Foodland Promotion - Bickford and Sons" />
+  <meta name="description" content="Purchase any Bickford and Sons’ four-pack and you may win one from four of the most distinguished pizza cooking inventions – the veritable Gasmate Pizza Oven." />
+  <meta property="og:description" content="Purchase any Bickford and Sons’ four-pack and you may win one from four of the most distinguished pizza cooking inventions – the veritable Gasmate Pizza Oven." />
+{% endblock %}
+
+{% block title "Foodland Promotion - " %}
+{% block bodyClass "foodland" %}
+
+{% block content %}
+
+  <div style="position:relative;">
+    <div class="black-gradient"></div>
+  </div>
+
+  <div class="foodland-promotion row">
+
+    <img class="f-corner" src="images/foodland-corner.png">
+    <img class="f-bottle small-3 column" src="images/foodland-bottle.jpg?2">
+
+    <p class="f-headline small-4 column"><span>Win</span> an elegant pizza oven.<br>What a Sparkling idea.</p>
+
+    <img class="f-bbq small-4 column" src="images/foodland-bbq.jpg?2">
+    <img class="f-range small-5 column" src="images/foodland-range.jpg?2">
+    <img class="f-logo small-3 column" src="images/foodland-logo.jpg">
+
+    <p class="f-desc small-8 column">Purchase any 700ml product from the Bickford and Sons' Sparkling range for the chance to win one of four Pizzeria Pizza Ovens.</p>
+
+    <form id="foodland-form" class="small-9 end column" method="post" action="/foodland">
+
+      <div class="form_general">
+        <small class="form-error"></small>
+      </div>
+
+      <div class="form_name form-item small-6 column">
+        <label class="req" for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+        <small class="form-error"></small>
+      </div>
+      <div class="form_email form-item small-6 column">
+        <label class="req" for="email">Email</label>
+        <input type="text" id="email" name="email" class="form-control" placeholder="Your@email.com">
+        <small class="form-error"></small>
+      </div>
+      <div class="form_phone form-item small-6 column">
+        <label class="req" for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" class="form-control" placeholder="Your Phone Number">
+        <small class="form-error"></small>
+      </div>
+      <div class="form_date form-item small-6 column">
+        <label class="req" for="date">Date Purchased</label>
+        <input type="text" id="date" name="date" class="form-control" placeholder="Your Date Purchased">
+        <small class="form-error"></small>
+      </div>
+      <div class="form_place form-item small-12 column">
+        <label class="req" for="place">Place of Purchase</label>
+        <input type="text" id="place" name="place" class="form-control" placeholder="Your Place of Purchase">
+        <small class="form-error"></small>
+      </div>
+
+      <div class="form_fav form-item small-6 column">
+        <label for="type">Which is your favourite flavour?</label>
+        <div class="fav-option">
+          <input type="radio" class="form-control" name="fav" value="Red Grape">
+          <span class="radio-label">Red Grape &amp; Hibiscus</span>
+        </div>
+        <div class="fav-option">
+          <input type="radio" class="form-control" name="fav" value="Lemon">
+          <span class="radio-label">Lemon &amp; Lemon Myrtle</span>
+        </div>
+        <div class="fav-option">
+          <input type="radio" class="form-control" name="fav" value="Pear">
+          <span class="radio-label">Pear &amp; Wild Lime</span>
+        </div>
+        <div class="fav-option">
+          <input type="radio" class="form-control" name="fav" value="Apple">
+          <span class="radio-label">Apple &amp; Davidson Plum</span>
+        </div>
+        <small class="form-error"></small>
+      </div>
+
+      <div class="form_sweet form-item small-6 column">
+        <label for="sweet">How would you describe your favourite flavour?</label>
+        <div class="fav-option">
+          <input type="radio" class="form-control" name="sweet" value="Too Sweet">
+          <span class="radio-label">Too Sweet</span>
+        </div>
+        <div class="fav-option">
+          <input type="radio" class="form-control" name="sweet" value="Not Sweet Enough">
+          <span class="radio-label">Not Sweet Enough</span>
+        </div>
+        <div class="fav-option">
+          <input type="radio" class="form-control" name="sweet" value="Just Right">
+          <span class="radio-label">Just Right</span>
+        </div>
+        <small class="form-error"></small>
+      </div>
+
+      <div class="form_agree form-item small-12 column">
+        <div class="row">
+          <input type="checkbox" id="agree" name="agree" class="form-control xsmall-2 small-1 column">
+          <label class="req xsmall-10 column end" for="agree">I have read and agree to the <a target="_blank" href="BickfordSonsSparklingConsumerPromotionFoodland.pdf">terms and conditions</a></label>
+        </div>
+        <small class="form-error"></small>
+      </div>
+
+      <div class="form_website" style="display:none;">
+        <label for="website">Website</label>
+        <input type="text" id="website" name="website" class="form-control" placeholder="Enter Your Website URL">
+        <small class="form-error"></small>
+      </div>
+      <p class="rec-warning small-12 column">Remember, you must <b>retain your receipt as proof of purchase</b> to be eligible to win.</p>
+      <div class="form_send small-12 column end">
+        <button type="submit" id="send" name="send" class="btn btn-default">Enter to WIN</button>
+      </div>
+
+    </form>
+
+
+
+
+
+  </div>
+
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}

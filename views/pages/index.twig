@@ -1,0 +1,260 @@
+{% extends "layout.twig" %}
+
+{% block meta %}
+  <meta property="og:title" content="Bickford and Sons" />
+  <meta name="description" content="Inspired by original beverages created almost 150 years ago, Bickford and Sons’ premium range of classic recipes are proudly crafted in Australia from natural ingredients just as they always have been." />
+  <meta property="og:description" content="Inspired by original beverages created almost 150 years ago, Bickford and Sons’ premium range of classic recipes are proudly crafted in Australia from natural ingredients just as they always have been." />
+{% endblock %}
+
+{% block bodyClass "home" %}
+
+
+{% block content %}
+
+  <section id="home">
+    <div class="black-gradient"></div>
+    <img class="slide-bg" src="images/home/home-bg.jpg">
+
+    <a class="comp-sign comp-sign wow slideInRight" href="foodland"><img src="images/bbq-comp.png"></a>
+
+    <div class="inner-content row">
+
+      <div class="wood-main" >
+        <img src="images/home/main-wood.png" alt="Raising spirits since 1874">
+        <img class="wood-soda wood-cover" src="images/home/sign-soda.jpg?v2" alt="Crafted for the most discerning connoisseur.">
+        <img class="wood-tonic wood-cover" src="images/home/sign-tonic.jpg?v2" alt="Fetch me a glass, would you old bean?">
+        <img class="wood-lemon wood-cover" src="images/home/sign-lemon.jpg?v2" alt="For the fairest of ladies and finest of gentleman.">
+        <img class="wood-ginger wood-cover" src="images/home/sign-ginger.jpg?v2" alt="Inspired by a recipe older than your Scotch">
+      </div>
+
+      <img class="home-subheading" src="images/home/home-subheading.png" alt="Great Scott, the golden age of flavour is back. Be a good sport old bean and scroll down to learn more.">
+
+      <img id="wood-soda" class="home-soda home-bottle" src="images/home/home-soda.png">
+      <img id="wood-tonic" class="home-tonic home-bottle" src="images/home/home-tonic.png">
+      <img id="wood-lemon" class="home-lemon home-bottle" src="images/home/home-lemon.png">
+      <img id="wood-ginger" class="home-ginger home-bottle" src="images/home/home-ginger.png">
+
+      <img class="mobile-bottles" src="images/home/mobile-bottles.png">
+
+      <a class="down-arrow scroll" data-link="#the-story"><p>scroll good sir</p><img src="images/down-arrow.png"></a>
+
+    </div>
+  </section>
+
+  <section id="the-story">
+    <div class="black-gradient"></div>
+    <img class="slide-bg" src="images/story/story-bg.jpg">
+    <img class="stamp" src="images/story/stamp.png">
+    <img class="para-building" src="images/story/building.png">
+
+    <div class="inner-content row">
+
+      <img class="well-played" src="images/story/well-played.png" alt="Well played. Carry on.">
+      <img class="behold wow flipInX" data-wow-offset="200" src="images/story/behold.png" alt="Behold. Over 130 years of fantastical flavour.">
+      <p class="text-content wow flipInX" data-wow-offset="200">Good Sir, I do declare that Bickford and Sons has a grand history of crafting exuberant flavours and exquisite tastes. Over 140 years ago, and even after his passing, the recipes created in William Bickford’s apothecary shop inspired the creations of wife Ann Margaret’s South Australian Cordial factory. With the arrival of carbonation in 1874, the cordial factory became AM Bickford and Son, producing exhilarating beverages that quickly ensured that the Bickford’s name became synonymous with superior quality and taste. Today, the same commitment to authentic recipes and innovative production methods using only the finest ingredients lives on. To that we say Bravo! A jolly good innings indeed.</p>
+      <img class="old-pics wow swing" data-wow-offset="400" src="images/story/old-pics.png">
+      <img class="building wow swing" data-wow-offset="400" src="images/story/building-pic.png">
+      <a class="down-arrow scroll" data-link="#finest-ingredients"><img src="images/down-arrow.png"></a>
+
+    </div>
+    <img class="book wow slideInUp" data-wow-offset="400" src="images/story/book.png">
+  </section>
+
+  <section id="finest-ingredients">
+    <div class="black-gradient"></div>
+    <img class="slide-bg" src="images/classic1/classic1-bg.jpg">
+
+    <div class="inner-content row">
+
+      <img class="classic1-bottle" src="images/classic1/classic1-bottle.png">
+      <img class="bottle-glow" src="images/bottle-glow.png">
+      <div id="sprite" class="sprite"></div>
+      <img class="cycle-man wow lightSpeedIn" data-wow-offset="800" src="images/classic1/cycle-man.png">
+      <img class="classic1-header" src="images/classic1/classic1-header.png" alt="History delightfully repeated">
+      <img class="classic1-subheader wow flipInX" data-wow-offset="200" src="images/classic1/classic1-subheader.png" alt="Raise your spirits with the new range of premium classic mixers.">
+      <p class="text-content wow flipInX" data-wow-offset="200">By jingo, we’ve done it again chuckaboo. Bickford and Sons new range of fizzing flavours are a splendid dose of merriment for your mouth indeed. The recipes have been crafted by hand using the finest ingredients just as they were in Mr Bickford’s apothecary shop all those years ago.</p>
+      <a class="classic1-link-balloon scroll wow zoomInLeft" data-link="#classic-mixers"><img src="images/classic1/classic1-link-balloon.png" alt="Discover the classic range"></a>
+      <a class="down-arrow scroll" data-link="#classic-mixers"><img src="images/down-arrow.png"></a>
+
+    </div>
+  </section>
+
+  <section id="classic-mixers">
+    <div class="black-gradient"></div>
+    <img class="slide-bg" src="images/classic2/classic2-bg.jpg">
+
+    <div class="inner-content row">
+
+      <img class="classic2-heading" src="images/classic2/classic2-heading.png" alt="Au naturel indeed">
+      <img class="classic2-subheading wow flipInX" data-wow-offset="200" src="images/classic2/classic2-subheading.png" alt="Pure brilliance comes natural I say">
+      <p class="text-content wow flipInX" data-wow-offset="200">Good fellows, allow me to wax grandiloquently. As a fine, upstanding chemist, Mr Bickford focused fastidiously on producing products with inherent health benefits. This same dash-fire commitment lives on today as we select the purest filtered water and the most natural ingredients to create our distinctive taste and flavour.</p>
+      <div class="lemon">
+        <img class="lemon-bottle hover-tag" src="images/classic2/lemon-bottle.png">
+        <img class="lemon-card bottle-desc" src="images/classic2/lemon-card.png" alt="Lusciously crisp Bitter Lemon is elevated with Natural Quassia extract to deliver an exquisitely balanced alongside the delectable tang of lemon.">
+      </div>
+      <div class="ginger">
+        <img class="ginger-bottle hover-tag" src="images/classic2/ginger-bottle.png">
+        <img class="ginger-card bottle-desc" src="images/classic2/ginger-card.png" alt="Aromatic Ginger entices the senses making way for a velvet smooth texture with a delightfully warm mouth feel and a determined yet subtle flavour to add depth to a favourite spirit.">
+      </div>
+      <div class="soda">
+        <img class="soda-bottle hover-tag" src="images/classic2/soda-bottle.png">
+        <img class="soda-card bottle-desc" src="images/classic2/soda-card.png" alt="Refreshing, purified Australian water, simply carbonated to create a wonderfully restrained effervescence with a sparkling clean finish.">
+      </div>
+      <div class="tonic">
+        <img class="tonic-bottle hover-tag" src="images/classic2/tonic-bottle.png">
+        <img class="tonic-card bottle-desc" src="images/classic2/tonic-card.png" alt="Fragrant Tonic with natural taste of Cinchona extract, the original Quinine, exquisitely crafted to deliver a smooth, deliciously floral finish.">
+      </div>
+
+      <img class="mobilecard-tonic mobilecards" src="images/classic2/mobilecard-tonic.png">
+      <img class="mobilecard-soda mobilecards" src="images/classic2/mobilecard-soda.png">
+      <img class="mobilecard-lemon mobilecards" src="images/classic2/mobilecard-lemon.png">
+      <img class="mobilecard-ginger mobilecards" src="images/classic2/mobilecard-ginger.png">
+
+      <a class="down-arrow scroll" data-link="#sparkling-botanicals"><img src="images/down-arrow.png"></a>
+
+    </div>
+  </section>
+
+  <section id="sparkling-botanicals">
+    <div class="black-gradient"></div>
+    <img class="slide-bg" src="images/sparkling/sparkling-bg.jpg">
+    <img class="clouds1 wow slideInLeft" data-wow-duration="2s" data-wow-offset="300" src="images/sparkling/clouds1.png">
+    <img class="clouds2 wow slideInRight" data-wow-duration="2s" data-wow-offset="300" src="images/sparkling/clouds2.png">
+
+    <div class="inner-content row">
+
+      <img class="sparkling-title" src="images/sparkling/sparkling-title.png" alt="Sensational sparkling">
+      <img class="sparkling-subheading wow flipInX" data-wow-offset="200" src="images/sparkling/sparkling-subheading.png" alt="I bid thee verdant refreshment">
+      <p class="text-content wow flipInX" data-wow-offset="200">Bespoke bona fide botanical bliss will delight the senses with these beautifully crafted collisions of quintessential Australian ingredients. Quirky combinations inspired by the exceptional and created with passion usher in the dawning of a new golden age of flavour. Top notch sir, absolutely top notch.</p>
+
+      <div class="sparkling-card wow rotateInDownRight">
+        <img data-wow-offset="400" src="images/sparkling/sparkling-card.png">
+        <div class="apple-light hover-lights"></div>
+        <div class="lemon-light hover-lights"></div>
+        <div class="grape-light hover-lights"></div>
+        <div class="pear-light hover-lights"></div>
+      </div>
+      <img id="apple-light" class="sparkling-apple sparkling-bottle" src="images/sparkling/sparkling-apple.png">
+      <img id="lemon-light" class="sparkling-lemon sparkling-bottle" src="images/sparkling/sparkling-lemon.png">
+      <img id="grape-light" class="sparkling-grape sparkling-bottle" src="images/sparkling/sparkling-grape.png">
+      <img id="pear-light" class="sparkling-pear sparkling-bottle" src="images/sparkling/sparkling-pear.png">
+
+      <img class="mobile-sparkling-bottles" src="images/sparkling/mobile-sparkling-bottles.png">
+
+      <a class="down-arrow scroll" data-link="#liaise"><img src="images/down-arrow.png"></a>
+
+    </div>
+  </section>
+
+
+  <section id="liaise">
+    <div class="black-gradient"></div>
+    <div class="black-cover"></div>
+
+    <div class="row">
+
+      <form class="contact-form small-7 end column" method="post" action="/contact">
+        <h2 class="heading">Feedback and enquiries</h2>
+        <p class="contact-msg">If you would like to provide feedback on any of our products or have a customer or trade related enquiry, please complete and submit the form below. We will endeavour to respond within 48 hours.</p>
+        <div class="form_general">
+          <small class="form-error"></small>
+        </div>
+        <p class="enquiry-message small-12 column">Please select an enquiry type</p>
+        <div class="form_enquiry-type form-item small-12 column">
+          <label class="req enq-label small-4 column end" for="enquiry-type">Enquiry Type</label>
+          <select id="enquiry-type" name="enquiry-type" class="form-control small-4 column end">
+            <option value="- - -" selected="true" disabled="disabled">- - -</option>
+            <option value="General Enquiry">General Enquiry</option>
+            <option value="Product Issue">Product Issue</option>
+            <option value="Trade Enquiry">Trade Enquiry</option>
+          </select>
+          <small class="form-error"></small>
+        </div>
+        <div class="form_name hide-item form-item small-6 column">
+          <label class="req" for="name">Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_email hide-item form-item small-6 column">
+          <label class="req" for="email">Email</label>
+          <input type="text" id="email" name="email" class="form-control" placeholder="Your@email.com">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_phone hide-item form-item small-6 column">
+          <label class="req" for="phone">Phone</label>
+          <input type="text" id="phone" name="phone" class="form-control" placeholder="Your Phone Number">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_postcode hide-item form-item small-6 column">
+          <label class="req" for="postcode">Postcode</label>
+          <input type="text" id="postcode" name="postcode" class="form-control" placeholder="Your Postcode">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_street hide-item form-item small-5 column">
+          <label class="req" for="street">Street Address</label>
+          <input type="text" id="street" name="street" class="form-control" placeholder="Your Street Address">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_suburb hide-item form-item small-4 column">
+          <label class="req" for="suburb">Suburb</label>
+          <input type="text" id="suburb" name="suburb" class="form-control" placeholder="Your Suburb">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_state hide-item form-item small-3 column">
+          <label class="req" for="state">State</label>
+          <input type="text" id="state" name="state" class="form-control" placeholder="Your State">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_website" style="display:none;">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" class="form-control" placeholder="Enter Your Website URL">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_message hide-item form-item small-12 column">
+          <label class="req" for="message">Message</label>
+          <textarea id="message" name="message" class="form-control" placeholder="Enter Your Message"></textarea>
+          <small class="form-error"></small>
+        </div>
+        <p class="contact-warning hide-item">We only use your personal information in resolving your enquiry. Your email address is the primary form of contact.</p>
+        <div class="hide-item form_send small-3 column end">
+          <button type="submit" id="send" name="send" class="btn btn-default">Send</button>
+        </div>
+      </form>
+
+      <form class="sub-form small-5 end column" method="post" action="/subscribe">
+        <h2 class="heading">Subscribe to eNews</h2>
+        <p class="contact-msg">Subscribe to our fave online store <a href="https://www.sippify.com.au/" target="_blank">Sippify.com.au</a> to receive product enews</p>
+        <div class="form_general">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_name form-item small-12 column">
+          <label class="req" for="name">Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_email form-item small-12 column">
+          <label class="req" for="email">Email</label>
+          <input type="text" id="email" name="email" class="form-control" placeholder="Your@email.com">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_website" style="display:none;">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" class="form-control" placeholder="Enter Your Website URL">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_send small-3 column end">
+          <button type="submit" id="subscribe" name="subscribe" class="btn btn-default">Subscribe</button>
+        </div>
+        <p class="contact-msg small-12 column">*We are committed to protecting your privacy in accordance with our <a href="/privacy-statement">Privacy Statement</a>. By subscribing you agree to the <a href="/terms-conditions">Terms and Conditions</a> and understand that you can unsubscribe at any time.</p>
+      </form>
+
+    </div>
+
+  </section>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}

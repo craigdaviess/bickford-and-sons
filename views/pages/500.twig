@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+
+
+
+{% block title "500 Error - " %}
+{% block bodyClass "error-container" %}
+
+{% block content %}
+
+  <div class="error-page">
+    <h2 class="heading">500 Error, Internal Server Error</h2>
+
+  </div>
+
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {# <link href="css/about.css" rel="stylesheet" /> #}
+{% endblock %}

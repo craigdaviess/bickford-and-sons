@@ -1,0 +1,21 @@
+{
+  "name": "wboot",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "foundation": "~5.5.2"
+  },
+  "dependencies": {
+    "animsition": "~3.5.2",
+    "slick.js": "~1.5.5",
+    "sweetalert": "~1.0.1"
+  }
+}

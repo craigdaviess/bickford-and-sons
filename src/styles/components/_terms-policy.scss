@@ -1,0 +1,59 @@
+
+.terms-policy {
+
+  // nav {
+  //   position: relative;
+  //   background: rgba(0,0,0,0.7);
+  //   @media #{$small-up} {
+  //     padding: 5px 0;
+  //   }
+
+  //   .nav-home {
+  //     @media #{$xsmall-only} {
+  //       display: none;
+  //     }
+  //     width: 108px; // 9%
+  //     margin: 0 40px 0 10px;
+  //   }
+  //   .nav-story {
+  //     width: 60%;
+  //     @media #{$small-up} {
+  //       width: 74px; // 6.2%
+  //     }
+  //   }
+  //   .nav-classic {
+  //     width: 51%;
+  //     @media #{$small-up} {
+  //       width: 60px; // 5%
+  //     }
+  //   }
+  //   .nav-sparkling {
+  //     width: 73%;
+  //     @media #{$small-up} {
+  //       width: 90px; // 7.5%
+  //     }
+  //   }
+  //   .nav-movers {
+  //     width: 53%;
+  //     @media #{$small-up} {
+  //       width: 60px; // 5%
+  //     }
+  //   }
+  //   .nav-office {
+  //     width: 47%;
+  //     @media #{$small-up} {
+  //       width: 54px; // 4.5%
+  //     }
+  //   }
+  // }
+
+
+  .terms-conditions, .privacy-statement {
+    margin-top: 60px;
+    padding: 0 20px;
+    @media #{$xsmall-only} {
+      padding: 0 10px;
+    }
+
+  }
+}

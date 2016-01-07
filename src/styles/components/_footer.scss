@@ -1,0 +1,142 @@
+
+footer {
+  background: linear-gradient(#c8b5a2, #ab9a87);
+  position: relative;
+
+  .social-links {
+    text-align: center;
+    margin: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      text-align: center;
+      a {
+        font-size: 0;
+      }
+    }
+    .facebook-link a:before {
+      font-family: 'icomoon';
+      content: "\e901";
+      color: $brown;
+      font-size: 30px;
+      transition: 0.2s;
+    }
+    .twitter-link a:before {
+      font-family: 'icomoon';
+      content: "\e902";
+      color: $brown;
+      font-size: 30px;
+      transition: 0.2s;
+    }
+    .instagram-link a:before {
+      font-family: 'icomoon';
+      content: "\e900";
+      color: $brown;
+      font-size: 30px;
+      transition: 0.2s;
+    }
+    .youtube-link a:before {
+      font-family: 'icomoon';
+      content: "\f166";
+      color: $brown;
+      font-size: 35px;
+      transition: 0.2s;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  section.footer-section.columns {
+    float: none;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 25px;
+    @media #{$small-up} {
+      padding: 50px;
+    }
+
+    .bottom-footer {
+      @media only screen and (max-width: $large-breakpoint) and (min-width: $xsmall-breakpoint) {
+        .med-edit {
+          text-align: center;
+          ul, a, p {
+            float: none;
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+          }
+        }
+      }
+      ul.bottom-links {
+        padding: 0;
+        margin: 0;
+        font-family: $droid;
+        text-align: center;
+        margin: 1em 0 2em 0;
+        // @media #{$xsmall-only} {
+        //   display: none;
+        // }
+        li {
+          list-style: none;
+          letter-spacing: 1px;
+          font-size: 14px;
+          //text-transform: uppercase;
+          padding-bottom: 5px;
+          @media #{$small-up} {
+            display: inline-block;
+            padding-right: 20px;
+            padding-bottom: 0;
+          }
+          a {
+            color: $brown;
+            transition: 0.2s;
+            &:hover {
+              color: #000;
+            }
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+
+      .sippify-link img {
+        max-width: 160px;
+        width: 100%;
+      }
+      .address-post {
+        font-size: 13px;
+        color: $brown;
+        line-height: 20px;
+        margin: 0;
+        @media #{$xsmall-only} {
+          margin-top: 20px;
+          font-size: 12px;
+        }
+      }
+      .left-address {
+        @media #{$xsmall-only} {
+          clear: left;
+        }
+      }
+
+      .cannon {
+        @media #{$xsmall-only} {
+          display: none;
+        }
+      }
+
+      .copyright {
+        text-align: left;
+        color: $brown;
+        margin: 0;
+        font-size: 14px;
+        padding: 0;
+        @media #{$xsmall-only} {
+          text-align: center;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}

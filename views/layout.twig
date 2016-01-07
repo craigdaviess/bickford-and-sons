@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="{% block bodyClass "default" %}">
+  <head>
+    <title>{% block title "" %}Bickford and Sons</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta property="og:site_name" content="Bickford and Sons" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://www.bickfordandsons.com.au/images/fb-logo.jpg" />
+    <link rel="canonical" href="{{ app.request.getUri() }}" />
+    <meta property="og:url" content="{{ app.request.getUri() }}" />
+    {% block meta "" %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico?v6" />
+    <link rel="apple-touch-icon" href="/touch-icon-iphone.jpg" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/touch-icon-ipad.jpg" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/touch-icon-iphone-retina.jpg" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/touch-icon-ipad-retina.jpg" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+
+    {% block stylesheets %}
+      <link href="/css/style.css?9" rel="stylesheet" />
+      <link href="/css/fonts.css" rel="stylesheet" />
+      <link href="/css/animate.min.css" rel="stylesheet" />
+    {% endblock %}
+    <script src="/js/modernizr.js"></script>
+  </head>
+  <body>
+
+    <div class="loading-screen">
+      <div class="inner-bg"></div>
+      <div class="mobile-sprite"><img src="images/classic1/cycle-man.png"></div>
+      <div class="sprite"></div>
+    </div>
+
+    {% include 'header/_nav.twig' with {'title': 'Bickford and Sons'} %}
+
+    <div class="click-mask"></div>
+    <div class="global-container">
+
+      {% block content "" %}
+
+    </div>
+
+    {% include 'footer/_footer-nav.twig' %}
+
+    {% block javascripts %}
+      <script src="/js/app.min.js"></script>
+    {% endblock %}
+
+  </body>
+</html>

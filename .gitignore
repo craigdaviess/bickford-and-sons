@@ -1,0 +1,13 @@
+# Ignore the vendor folder (created by 'composer install').
+vendor
+composer.lock
+.sass-cache
+
+# Ignore the node modules folder (created by 'npm install').
+node_modules
+
+# Ignore the bower modules folder (created by 'bower install').
+bower_components
+
+www/css/*
+www/js/*

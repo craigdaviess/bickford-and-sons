@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+
+
+
+{% block title "404 Error - " %}
+{% block bodyClass "error-container" %}
+
+{% block content %}
+
+  <div class="error-page">
+    <h2 class="heading">404 Error, Page Not Found</h2>
+
+  </div>
+
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {# <link href="css/about.css" rel="stylesheet" /> #}
+{% endblock %}
