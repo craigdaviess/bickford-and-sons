@@ -4,6 +4,7 @@
   <meta property="og:title" content="Foodland Promotion - Bickford and Sons" />
   <meta name="description" content="Purchase any Bickford and Sons’ four-pack and you may win one from four of the most distinguished pizza cooking inventions – the veritable Gasmate Pizza Oven." />
   <meta property="og:description" content="Purchase any Bickford and Sons’ four-pack and you may win one from four of the most distinguished pizza cooking inventions – the veritable Gasmate Pizza Oven." />
+  <link href='https://fonts.googleapis.com/css?family=Rouge+Script' rel='stylesheet' type='text/css'>
 {% endblock %}
 
 {% block title "Foodland Promotion - " %}
@@ -17,16 +18,22 @@
 
   <div class="foodland-promotion row">
 
-    <img class="f-corner" src="images/foodland-corner.png">
-    <img class="f-bottle small-3 column" src="images/foodland-bottle.jpg?2">
+    <!-- <img class="f-corner" src="images/foodland-corner.png"> -->
+    <div class="small-3 column">
+      <img class="f-bottle" src="images/foodland-bottle.png">
+      <img class="f-logo" src="images/foodland-logo.png">
+    </div>
 
-    <p class="f-headline small-4 column"><span>Win</span> an elegant pizza oven.<br>What a Sparkling idea.</p>
+    <p class="f-headline small-8 column end">Win<span class="heading-inner"> an elegant pizza oven.<br>What a <span class="sparkling">Sparkling</span> idea.</span></p>
 
-    <img class="f-bbq small-4 column" src="images/foodland-bbq.jpg?2">
-    <img class="f-range small-5 column" src="images/foodland-range.jpg?2">
-    <img class="f-logo small-3 column" src="images/foodland-logo.jpg">
+    <div class="small-5 column">
+      <p class="f-desc">Purchase any 700ml product from the Bickford and Sons Sparkling range for the chance to win one of four Pizzeria Pizza Ovens.</p>
+    </div>
 
-    <p class="f-desc small-8 column">Purchase any 700ml product from the Bickford and Sons' Sparkling range for the chance to win one of four Pizzeria Pizza Ovens.</p>
+    <img class="f-bbq small-3 column" src="images/foodland-bbq.png">
+
+
+
 
     <form id="foodland-form" class="small-9 end column" method="post" action="/foodland">
 
@@ -98,31 +105,35 @@
         <small class="form-error"></small>
       </div>
 
-      <div class="form_agree form-item small-12 column">
+      <div class="form_agree form-item small-6 column">
         <div class="row">
+          <p class="pre-terms">Terms and conditions apply. Proof of purchase required. Competition closes 12.00midnight on 1st March 2016.</p>
           <input type="checkbox" id="agree" name="agree" class="form-control xsmall-2 small-1 column">
           <label class="req xsmall-10 column end" for="agree">I have read and agree to the <a target="_blank" href="BickfordSonsSparklingConsumerPromotionFoodland.pdf">terms and conditions</a></label>
         </div>
         <small class="form-error"></small>
+
+        <div class="form_website" style="display:none;">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" class="form-control" placeholder="Enter Your Website URL">
+          <small class="form-error"></small>
+        </div>
+
+        <p class="rec-warning small-12 column">Remember, you must <b>retain your receipt as proof of purchase</b> to be eligible to win.</p>
+        <div class="form_send small-12 column end">
+          <button type="submit" id="send" name="send" class="btn btn-default">Enter to WIN</button>
+        </div>
       </div>
 
-      <div class="form_website" style="display:none;">
-        <label for="website">Website</label>
-        <input type="text" id="website" name="website" class="form-control" placeholder="Enter Your Website URL">
-        <small class="form-error"></small>
-      </div>
-      <p class="rec-warning small-12 column">Remember, you must <b>retain your receipt as proof of purchase</b> to be eligible to win.</p>
-      <div class="form_send small-12 column end">
-        <button type="submit" id="send" name="send" class="btn btn-default">Enter to WIN</button>
-      </div>
+      <img class="small-6 column" src="images/foodland-range.png">
+      <img class="f-logo2" src="images/foodland-logo.png">
+
 
     </form>
 
-
-
-
-
   </div>
+
+  <!-- <img class="f-table" src="images/foodland-table.jpg"> -->
 
 {% endblock %}
 

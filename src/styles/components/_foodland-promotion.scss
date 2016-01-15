@@ -1,55 +1,15 @@
 
 .foodland {
   body {
-    background: #f9f4e1;
+    //background: #d0c8bf;
+    background: radial-gradient(#FFFFFF, #d0c8bf) no-repeat;
+    min-height: 100%;
+    background-attachment: fixed;
+    margin: 0;
   }
-
-  // nav {
-  //   position: relative;
-  //   background: rgba(0,0,0,0.7);
-  //   @media #{$small-up} {
-  //     padding: 5px 0;
-  //   }
-
-  //   .nav-home {
-  //     @media #{$xsmall-only} {
-  //       display: none;
-  //     }
-  //     width: 108px; // 9%
-  //     margin: 0 40px 0 10px;
-  //   }
-  //   .nav-story {
-  //     width: 60%;
-  //     @media #{$small-up} {
-  //       width: 74px; // 6.2%
-  //     }
-  //   }
-  //   .nav-classic {
-  //     width: 51%;
-  //     @media #{$small-up} {
-  //       width: 60px; // 5%
-  //     }
-  //   }
-  //   .nav-sparkling {
-  //     width: 73%;
-  //     @media #{$small-up} {
-  //       width: 90px; // 7.5%
-  //     }
-  //   }
-  //   .nav-movers {
-  //     width: 53%;
-  //     @media #{$small-up} {
-  //       width: 60px; // 5%
-  //     }
-  //   }
-  //   .nav-office {
-  //     width: 47%;
-  //     @media #{$small-up} {
-  //       width: 54px; // 4.5%
-  //     }
-  //   }
-  // }
-
+  .global-container {
+    position: relative;
+  }
 
   .foodland-promotion {
     position: relative;
@@ -76,24 +36,32 @@
     }
     .f-headline {
       font-family: $brom;
-      font-size: 35px;
-      text-align: center;
+      font-size: 3em;
+      vertical-align: top;
       padding-top: 90px;
+      line-height: 1em;
       @media #{$small-up} {
+        font-size: 4em;
         padding-top: 40px;
         padding-bottom: 40px;
-        font-size: 22px;
       }
       @media #{$medium-up} {
-        font-size: 35px;
+        font-size: 7em;
       }
-      span {
-        font-size: 50px;
+      span.heading-inner {
+        line-height: 1.5em;
+        font-size: 0.6em;
         @media #{$small-up} {
-          font-size: 28px;
+          padding-left: 20px;
+          display: inline-block;
+          font-size: 0.35em;
         }
-        @media #{$medium-up} {
-          font-size: 80px;
+      }
+      span.sparkling {
+        font-family: 'Rouge Script';
+        font-size: 1.7em;
+        @media #{$small-up} {
+          font-size: 2em;
         }
       }
     }
@@ -101,15 +69,26 @@
     .f-bbq {
 
     }
-    .f-range {
-      @media #{$small-up} {
-        padding-top: 10px;
-        padding-bottom: 40px;
+    .f-desc {
+      font-size: 20px;
+      @media #{$medium-up} {
+        margin-top: 50px;
       }
+    }
+    .pre-terms {
+      font-size: 14px;
     }
     .f-logo {
       padding-top: 20px;
       padding-bottom: 20px;
+      @media #{$xsmall-only} {
+        display: none;
+      }
+    }
+    .f-logo2 {
+      @media #{$small-up} {
+        display: none;
+      }
     }
     .f-desc2 {
       .down-arrow {
@@ -143,6 +122,12 @@
           visibility: visible;
         }
       }
+      .form_fav, .form_sweet {
+        min-height: 150px;
+        @media #{$medium-up} {
+          min-height: 200px;
+        }
+      }
       .form_agree {
         .row {
           padding: 1em;
@@ -153,10 +138,13 @@
         }
         label {
           margin: 0;
+          a {
+            color: #e83c57;
+          }
         }
       }
       .rec-warning {
-        color: #FF9900;
+        color: #000;
       }
       .fav-option {
         display: block;
@@ -174,10 +162,21 @@
         padding: 10px 25px;
         margin: 10px 0;
         font-family: $droid;
-        font-size: 20px;
+        font-size: 28px;
+        background: #e83c57;
+        text-transform: uppercase;
+        &:hover {
+          background: darken(#e83c57, 10%);
+        }
       }
     }
 
-
   }
+
+  .f-table {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+
 }
