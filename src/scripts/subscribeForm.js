@@ -26,6 +26,7 @@ $(".sub-form").submit(function(e){
         $('.sub-form').trigger('reset'); //reset the form
 
         swal("Success", response.message, "success");
+        ga('send', 'event', 'eNews Subscribe', 'signup'); // let google analytics know
         //$('form').replaceWith('Success!');
       } else {
         //console.log(response.error);
