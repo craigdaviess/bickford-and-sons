@@ -15,7 +15,7 @@ class Contact
       $subcheck = isset($form['subcheck']) ? $form['subcheck']:0;
 
       $builtEmail = $this->buildEmail($form);
-      $data = ['name' => $form['name'], 'enquiry-type' => $form['enquiry-type'], 'email' => $form['email'], 'subcheck' => $form['subcheck'], 'message' => $builtEmail];
+      $data = ['name' => $form['name'], 'enquiry-type' => $form['enquiry-type'], 'email' => $form['email'], 'subcheck' => $subcheck, 'message' => $builtEmail];
 
       $return = $this->sendContactEmail($data);
 
