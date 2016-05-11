@@ -1,19 +1,21 @@
 <?php
 
 namespace Cobalt;
+use Cobalt\Subscribe;
 
 class Contact
 {
 
     public function processContactForm($form) {
 
-
       if ($errors = $this->checkFormForErrors($form)) {
         return array('error' => $errors);
       }
 
+      $subcheck = isset($form['subcheck']) ? $form['subcheck']:0;
+
       $builtEmail = $this->buildEmail($form);
-      $data = ['name' => $form['name'], 'enquiry-type' => $form['enquiry-type'], 'email' => $form['email'], 'message' => $builtEmail];
+      $data = ['name' => $form['name'], 'enquiry-type' => $form['enquiry-type'], 'email' => $form['email'], 'subcheck' => $form['subcheck'], 'message' => $builtEmail];
 
       $return = $this->sendContactEmail($data);
 
@@ -130,6 +132,12 @@ class Contact
         $return = array('error' => array('general' => $confirmmail->ErrorInfo));
       } else {
         //$return = new Response(json_encode(array('success'=>'success', 'email' => $data['email'])));
+
+        if ($data['subcheck']) {
+          $subscribeForm = new Subscribe();
+          $subCall = $subscribeForm->subscribeEmail($data);
+        }
+
         $return = array('success'=>'success', 'email' => $data['email']);
       }
 
