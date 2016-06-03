@@ -23,7 +23,7 @@ var gulp            = require('gulp'),
 ;
 
 gulp.task('styles', function () {
-    gulp.src([app['bower'] + '/animsition/dist/css/animsition.css', app['bower'] + '/sweetalert2/dist/sweetalert2.css', app['style']])
+    gulp.src([app['bower'] + '/animsition/dist/css/animsition.css', app['bower'] + '/perfect-scrollbar/css/perfect-scrollbar.css', app['bower'] + '/sweetalert2/dist/sweetalert2.css', app['style']])
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(cssGlobbing( {  extensions: ['.scss']  } ))
@@ -48,8 +48,10 @@ gulp.task('scripts', function() {
         app['bower'] + '/fastclick/lib/fastclick.js',
         app['bower'] + '/motio/motio.js',
         app['bower'] + '/animateCSS/dist/jquery.animatecss.js',
+        app['bower'] + '/perfect-scrollbar/js/perfect-scrollbar.jquery.js',
         app['bower'] + '/foundation/js/foundation.js',
         app['bower'] + '/foundation-datepicker/js/foundation-datepicker.min.js',
+        'node_modules/vue-youtube-embed/lib/vue-youtube-embed.js',
         app['script']
     ])
     .pipe(concat({ path: 'app.min.js', stat: { mode: 0666 }}))

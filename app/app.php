@@ -49,6 +49,11 @@ $app->post('/subscribe', function(Request $request) use($app) {
     return $app->json($return);
 });
 
+$app->get('/movers-and-shakers', function() use($app) {
+    return $app['twig']->render('pages/movers-and-shakers.twig');
+})->bind('movers-and-shakers');
+
+
 $app->get('/terms-conditions', function() use($app) {
     return $app['twig']->render('pages/terms-conditions.twig');
 })->bind('terms-conditions');

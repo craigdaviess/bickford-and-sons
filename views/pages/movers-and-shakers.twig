@@ -1,0 +1,168 @@
+{% extends "layout.twig" %}
+
+{% block meta %}
+  <meta property="og:title" content="Bickford and Sons" />
+  <meta name="description" content="Inspired by original beverages created almost 150 years ago, Bickford and Sons’ premium range of classic recipes are proudly crafted in Australia from natural ingredients just as they always have been." />
+  <meta property="og:description" content="Inspired by original beverages created almost 150 years ago, Bickford and Sons’ premium range of classic recipes are proudly crafted in Australia from natural ingredients just as they always have been." />
+{% endblock %}
+
+{% block bodyClass "home" %}
+
+
+{% block content %}
+
+  <section id="movers">
+    <div class="black-gradient"></div>
+    <img class="slide-bg" src="images/movers/bar-bg.jpg">
+
+    <router-view class="mainview" keep-alive transition transition-mode="out-in"></router-view>
+
+    <template id="template-gallery">
+      <div class="row-container row">
+
+        <h1 class="small-10 small-offset-1 large-offset-0 large-12 column">Concoctions and Libations</h1>
+
+        <div class="recipe-teasers small-10 small-centered large-12 column">
+          <ul class="row xsmall-block-grid-2 small-block-grid-4">
+
+            <li id="key-nedkelly" class="teaser-container" @click="loadcontent('the-ned-kelly-tango')">
+              <img src="images/movers/test-cocktail.jpg">
+              <p>The Ned Kelly Tango</p>
+            </li>
+            <li id="key-two" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title Test Text Text Text Text Text</p>
+            </li>
+            <li id="key-three" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-four" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-five" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-six" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-seven" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-eight" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-nine" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-ten" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-eleven" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-twelve" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-thirteen" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+            <li id="key-fourteen" class="teaser-container">
+              <img src="images/movers/filler-image.jpg">
+              <p>Filler Title</p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </template>
+
+    <template id="template-nedkelly">
+      <section class="recipe-div row-container row">
+        <div id="hole-nedkelly" class="recipe">
+          <div class="inner-recipe small-7 small-offset-1 column">
+            <h2>The Ned Kelly Tango</h2>
+            <h3>by James of Hains &amp; Co.</h3>
+            <a class="recipe-back" v-link="{ path: '/' }" @click="stopVideo">
+              <img src="images/down-arrow.png">
+              <span>Back</span>
+            </a>
+            <div class="ingredients small-5 column">
+              <h4>Ingredients</h4>
+              <ul>
+                <li>4 Parts Orange Juice</li>
+                <li>4 Parts Bitter Lemon</li>
+                <li>30ml Gin</li>
+                <li>Slice of Orange</li>
+              </ul>
+            </div>
+            <div class="method small-7 column">
+              <h4>Method</h4>
+              <ol>
+                <li>Fill glass with ice</li>
+                <li>Add 4 parts orange juice</li>
+                <li>Add 4 parts bitter lemon</li>
+                <li>Add 30ml of gin</li>
+                <li>Stir well</li>
+                <li>Garnish with orange</li>
+              </ol>
+            </div>
+
+          </div>
+          <div class="small-4 column">
+            <img class="cocktail-image" src="images/movers/test-cocktail.jpg">
+            <a id="watch-nedkelly" class="watch-film scroll" data-link="#video-nedkelly" @click="scrollControl">
+              <img src="images/movers/watch-film.png">
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="recipe-video" @click="playControl">
+        <div class="custom-play"></div>
+        <div class="custom-pause"></div>
+        <video loop id="video-nedkelly" class="now-paused">
+          <source src="video/beenleigh_promo.webm" type="video/webm">
+          <source src="video/beenleigh_promo.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </template>
+
+    <template id="nothing">
+      <div id="hole-two" class="recipe"><h2>2</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-three" class="recipe"><h2>3</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-four" class="recipe"><h2>4</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-five" class="recipe"><h2>5</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-six" class="recipe"><h2>6</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-seven" class="recipe"><h2>7</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-eight" class="recipe"><h2>8</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-nine" class="recipe"><h2>9</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-ten" class="recipe"><h2>10</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-eleven" class="recipe"><h2>11</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-twelve" class="recipe"><h2>12</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-thirteen" class="recipe"><h2>13</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+      <div id="hole-fourteen" class="recipe"><h2>14</h2><a class="recipe-back" v-link="{ path: '/' }">Back</a></div>
+    </template>
+
+
+  </section>
+
+
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}

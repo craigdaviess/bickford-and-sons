@@ -137,7 +137,7 @@ $(document).ready(function(){
     return false;
   });
 
-  if ($(window).width() > 720) { // not mobile
+  if ($(window).width() > 720 && $("#home").length) { // not mobile and on the homepage
     //lightflicker();
     new WOW().init();
 

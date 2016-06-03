@@ -9,5 +9,3 @@ node_modules
 # Ignore the bower modules folder (created by 'bower install').
 bower_components
 
-www/css/*
-www/js/*

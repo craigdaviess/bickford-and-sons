@@ -2,7 +2,7 @@
 // when enquiry type gets selected
 $("#enquiry-type").on('change', function() {
 
-  $(".form_name, .form_email, .form_postcode, .form_phone, .form_message, .form_send, .contact-warning").removeClass("hide-item");
+  $(".form_name, .form_email, .form_postcode, .form_phone, .form_message, .form_send, .subcheck-container, .contact-warning").removeClass("hide-item");
   $(".enquiry-message").hide();
   $('.form-error').each(function(){
     $(this).html('');
@@ -47,7 +47,10 @@ $(".contact-form").submit(function(e){
       if (response.success) {
         $('.contact-form').trigger("reset"); //reset the form
         swal("Success", "Thank you for your message, we will get back to you as soon as possible. We have sent a confirmation email to '"+response.email+"'.", "success");
-        $(".contact-form .form_name, .contact-form .form_email, .form_postcode, .form_phone, .form_street, .form_suburb, .form_state, .form_message, .form_send, .contact-warning").addClass("hide-item");
+        if ($(".form_subcheck").is(":checked")) {
+          ga('send', 'event', 'eNews Subscribe', 'signup'); // let google analytics know
+        }
+        $(".contact-form .form_name, .contact-form .form_email, .form_postcode, .form_phone, .form_street, .form_suburb, .form_state, .form_message, .subcheck-container, .form_send, .contact-warning").addClass("hide-item");
       }
       else {
         //console.log(response.error);
