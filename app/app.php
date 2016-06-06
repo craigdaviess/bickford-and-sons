@@ -38,7 +38,7 @@ $app->get('/', function() use($app) {
 })->bind('index');
 $app->post('/contact', function(Request $request) use($app) {
     $formValues = $request->request->all();
-    $contactForm = new Contact();
+    $contactForm = new Contact("Bickford and Sons", "no-reply@bickfordandsons.com.au", "info@bickfords.net", "http://www.bickfordandsons.com.au");
     $return = $contactForm->processContactForm($formValues);
     return $app->json($return);
 });
@@ -49,9 +49,9 @@ $app->post('/subscribe', function(Request $request) use($app) {
     return $app->json($return);
 });
 
-$app->get('/movers-and-shakers', function() use($app) {
-    return $app['twig']->render('pages/movers-and-shakers.twig');
-})->bind('movers-and-shakers');
+// $app->get('/movers-and-shakers', function() use($app) {
+//     return $app['twig']->render('pages/movers-and-shakers.twig');
+// })->bind('movers-and-shakers');
 
 
 $app->get('/terms-conditions', function() use($app) {

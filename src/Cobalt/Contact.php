@@ -5,6 +5,16 @@ use Cobalt\Subscribe;
 
 class Contact
 {
+    protected $webtitle;
+    protected $noreply;
+    protected $webmail;
+    protected $fullweb;
+    public function __construct($webtitle, $noreply, $webmail, $fullweb) { //$this->webtitle
+      $this->webtitle = $webtitle;
+      $this->noreply = $noreply;
+      $this->webmail = $webmail;
+      $this->fullweb = $fullweb;
+    }
 
     public function processContactForm($form) {
 
@@ -84,15 +94,15 @@ class Contact
 
       $mail = new \PHPMailer();
 
-      $mail->setFrom("no-reply@bickfordandsons.com.au", "Bickford and Sons");
+      $mail->setFrom($this->noreply, $this->webtitle);
       //Set an alternative reply-to address
-      $mail->addReplyTo("no-reply@bickfordandsons.com.au", "Bickford and Sons");
+      $mail->addReplyTo($this->noreply, $this->webtitle);
       //Set who the message is to be sent to
-      $mail->addAddress("info@bickfords.net.au"); //info@bickfords.net.au
-      // Set email format to HTML
+      $mail->addAddress($this->webmail); //$this->webmail
+      //Set email format to HTML
       $mail->isHTML(true);
       //Set the subject line
-      $mail->Subject = $data['enquiry-type'];;
+      $mail->Subject = $data['enquiry-type'];
       //This is the HTML message body
       $mail->Body = $data['message'];
       //This is the body in plain text for non-HTML mail clients
@@ -103,17 +113,17 @@ class Contact
 
       $confirmmail = new \PHPMailer();
 
-      $confirmmail->setFrom("no-reply@bickfordandsons.com.au", "Bickford and Sons");
+      $confirmmail->setFrom($this->noreply, $this->webtitle);
       //Set an alternative reply-to address
-      $confirmmail->addReplyTo("no-reply@bickfordandsons.com.au", "Bickford and Sons");
+      $confirmmail->addReplyTo($this->noreply, $this->webtitle);
       //Set who the message is to be sent to
       $confirmmail->addAddress($data['email']);
       //Set email format to HTML
       $confirmmail->isHTML(true);
       //Set the subject line
-      $confirmmail->Subject = "Bickford and Sons Enquiry";
+      $confirmmail->Subject = $this->webtitle . " Enquiry";
       //This is the HTML message body
-      $confirmmail->Body = "<table align='center' border='0' width='800' style='background: #FFF; display: block;'><tr><td align='center' style='height: 100px;'><img style='margin: 0 auto; display: block; width: 360px; text-align: center;' src='http://bickfordandsons.com.au/images/bick-logo-email.jpg'></td></tr><tr style='padding: 0 40px 40px 40px; display: block;'><td style='background: #FFF; padding: 20px;'><p style='font-size:22px; color: #000;'>Thanks for dropping us a line, " . $data['name'] . "! While we will attempt to respond to all inquiries, due to high volumes of requests at certain times, we may not be able to respond to every message left.</p><br><br></td></tr></table>";
+      $confirmmail->Body = "<table align='center' border='0' width='800' style='display: block;'><tr><td align='center' style='height: 100px;'><img style='margin: 0 auto; display: block; width: 360px; text-align: center;' src='" . $this->fullweb . "/images/logo-email.jpg'></td></tr><tr style='padding: 0 40px 40px 40px; display: block;'><td style='background: #FFF; padding: 20px;'><p style='font-size:22px; color: #000;'>Thanks for dropping us a line, " . $data['name'] . "! While we will attempt to respond to all inquiries, due to high volumes of requests at certain times, we may not be able to respond to every message left.</p><br></td></tr></table>";
       //This is the body in plain text for non-HTML mail clients
       $confirmmail->AltBody = 'You need to view this email in HTML';
 

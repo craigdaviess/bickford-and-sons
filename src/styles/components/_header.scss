@@ -149,15 +149,16 @@ nav {
       }
     }
     .nav-movers {
-      @media #{$xsmall-only} {
-        a img {
-          display: block;
-          margin: 0 auto;
-        }
-      }
-      @media #{$small-only} {
-        width: 11%;
-      }
+      display: none;
+      // @media #{$xsmall-only} {
+      //   a img {
+      //     display: block;
+      //     margin: 0 auto;
+      //   }
+      // }
+      // @media #{$small-only} {
+      //   width: 11%;
+      // }
     }
     .nav-liaise {
       @media #{$xsmall-only} {

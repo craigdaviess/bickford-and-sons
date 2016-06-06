@@ -962,6 +962,7 @@
     color: #FFF;
     font-size: 0.9em;
     line-height: 1.4em;
+    padding: 0;
   }
 
   .form-item {
@@ -976,10 +977,11 @@
     display: none;
   }
   .form_send {
-    padding: 5px;
+    padding: 0;
   }
   .enquiry-message {
     padding-left: 0;
+    float: none;
   }
   .contact-form {
     padding-top: 20px;
@@ -1007,6 +1009,12 @@
   button {
     border-radius: 5px;
     padding: 10px 20px;
+    border: 1px #999 solid;
+    background: #1a1006;
+    font-family: $droid;
+    &:hover {
+      background-color: darken(#1a1006, 10%);
+    }
   }
   .subcheck-container {
     margin-bottom: 10px;
@@ -1029,4 +1037,49 @@
   .error {
     display: none;
   }
+  .pre-enquiry {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      padding: 2px 15px;
+      border-radius: 10px;
+      border: 1px #999 solid;
+      margin-bottom: 10px;
+      background: #1a1006;
+      //font-weight: bold;
+      width: 90%;
+      display: block;
+      cursor: pointer;
+      transition: 0.2s;
+      @media #{$medium-up} {
+        width: 65%;
+      }
+      @media #{$large-up} {
+        width: 50%;
+      }
+      &:hover {
+        background-color: darken(#1a1006, 10%);
+      }
+    }
+    .pre-enquiry-option:before {
+      font-family: 'icomoon';
+      font-size: 24px;
+      font-weight: normal;
+      padding-right: 15px;
+      vertical-align: sub;
+      color: #b2d8ff;
+    }
+    .general-option:before {
+      content: '\e902';
+    }
+    .product-option:before {
+      content: '\e903';
+      font-size: 23px;
+    }
+    .trade-option:before {
+      content: '\e907';
+    }
+  }
+
 }
