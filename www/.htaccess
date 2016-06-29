@@ -8,10 +8,10 @@ AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css a
     Options -MultiViews
 
     RewriteEngine On
-    #RewriteCond %{HTTP_HOST} !^www\.
-    #RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} !^www\.
+    RewriteCond %{HTTP_HOST} =bickfordandsons.com.au
+    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
     #RewriteBase /path/to/app
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [QSA,L]
-
 </IfModule>
