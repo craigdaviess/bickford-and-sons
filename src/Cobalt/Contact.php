@@ -59,7 +59,11 @@ class Contact
         $errors['phone'] = 'Please enter your phone number';
       }
 
-      if ($form['enquiry-type'] == 'Product Issue') {
+      if ($form['product'] == '' && $form['enquiry-type'] == "Product Feedback") {
+        $errors['product'] = 'Please enter the product';
+      }
+
+      if ($form['enquiry-type'] == 'Product Feedback') {
         if ($form['street'] == '') {
           $errors['street'] = 'Please enter your street address';
         }
@@ -83,8 +87,10 @@ class Contact
     public function buildEmail($form) {
       if ($form['enquiry-type'] == "General Enquiry") {
         $body = "<table><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Name:</td><td>" . $form['name'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Email:</td><td>" . $form['email'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Phone:</td><td>" . $form['phone'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Postcode:</td><td>" . $form['postcode'] . "</td></tr></table><hr /><p style='font-size:16px;'>" . $form['message'] . "</p><hr />";
+      } else if ($form['enquiry-type'] == "Product Feedback") {
+        $body = "<table><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Product:</td><td>" . $form['product'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Name:</td><td>" . $form['name'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Email:</td><td>" . $form['email'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Phone:</td><td>" . $form['phone'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Postcode:</td><td>" . $form['postcode'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Address:</td><td>" . $form['street'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Suburb:</td><td>" . $form['suburb'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>State:</td><td>" . $form['state'] . "</td></tr></table><hr /><p style='font-size:16px;'>" . $form['message'] . "</p><hr />";
       } else {
-        $body = "<table><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Name:</td><td>" . $form['name'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Email:</td><td>" . $form['email'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Phone:</td><td>" . $form['phone'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Postcode:</td><td>" . $form['postcode'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Address:</td><td>" . $form['street'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Suburb:</td><td>" . $form['suburb'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>State:</td><td>" . $form['state'] . "</td></tr></table><hr /><p style='font-size:16px;'>" . $form['message'] . "</p><hr />";
+        $body = "<table><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Name:</td><td>" . $form['name'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Email:</td><td>" . $form['email'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Phone:</td><td>" . $form['phone'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Postcode:</td><td>" . $form['postcode'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Company:</td><td>" . $form['company'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Address:</td><td>" . $form['street'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>Suburb:</td><td>" . $form['suburb'] . "</td></tr><tr><td style='width:100px; font-weight:bold; font-size:14px;'>State:</td><td>" . $form['state'] . "</td></tr></table><hr /><p style='font-size:16px;'>" . $form['message'] . "</p><hr />";
       }
       return $body;
     }
@@ -123,7 +129,7 @@ class Contact
       //Set the subject line
       $confirmmail->Subject = $this->webtitle . " Enquiry";
       //This is the HTML message body
-      $confirmmail->Body = "<table align='center' border='0' width='800' style='display: block;'><tr><td align='center' style='height: 100px;'><img style='margin: 0 auto; display: block; width: 360px; text-align: center;' src='" . $this->fullweb . "/images/logo-email.jpg'></td></tr><tr style='padding: 0 40px 40px 40px; display: block;'><td style='background: #FFF; padding: 20px;'><p style='font-size:22px; color: #000;'>Thanks for dropping us a line, " . $data['name'] . "! While we will attempt to respond to all inquiries, due to high volumes of requests at certain times, we may not be able to respond to every message left.</p><br></td></tr></table>";
+      $confirmmail->Body = "<table align='center' border='0' width='800' style='display: block;'><tr><td align='center' style='height: 100px;'><img style='margin: 0 auto; display: block; width: 360px; text-align: center;' src='" . $this->fullweb . "/images/logo-email.jpg'></td></tr><tr style='padding: 0 40px 40px 40px; display: block;'><td style='background: #FFF; padding: 20px;'><p style='font-size:22px; color: #000;'>Thanks for dropping us a line, " . $data['name'] . "! While we will attempt to respond to all inquiries, due to high volumes of requests at certain times, we may not be able to respond to every message left.</p><br><p style='font-size:14px; color: #000;'>This is an automated message.</p><br></td></tr></table>";
       //This is the body in plain text for non-HTML mail clients
       $confirmmail->AltBody = 'You need to view this email in HTML';
 

@@ -321,6 +321,35 @@
 
 }
 
+
+.sprite {
+  @media #{$xsmall-only} {
+    display: none;
+  }
+  @media #{$small-up} {
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
+    width: 150px;
+    height: 354px;
+    background: url('../images/classic1/cycle-ani-small.png');
+  }
+  @media #{$medium-up} {
+    bottom: auto;
+    top: 5%;
+    width: 280px;
+    height: 662px;
+    background: url('../images/classic1/cycle-ani.png');
+  }
+  @media #{$large-up} {
+    top: 10%;
+  }
+  @media #{$xlarge-up} {
+    top: 22%;
+    left: 17%;
+  }
+}
+
 #finest-ingredients {
   position: relative;
   .black-gradient {
@@ -331,33 +360,7 @@
     background: url('../images/classic1/mobile-classic1-bg.jpg') no-repeat center top;
   }
 
-  .sprite {
-    @media #{$xsmall-only} {
-      display: none;
-    }
-    @media #{$small-up} {
-      position: absolute;
-      bottom: 15%;
-      left: 20%;
-      width: 150px;
-      height: 354px;
-      background: url('../images/classic1/cycle-ani-small.png');
-    }
-    @media #{$medium-up} {
-      bottom: auto;
-      top: 5%;
-      width: 280px;
-      height: 662px;
-      background: url('../images/classic1/cycle-ani.png');
-    }
-    @media #{$large-up} {
-      top: 10%;
-    }
-    @media #{$xlarge-up} {
-      top: 22%;
-      left: 17%;
-    }
-  }
+
   .classic1-bottle {
     @media #{$xsmall-only} {
       display: none;
@@ -1074,11 +1077,11 @@
       color: #b2d8ff;
     }
     .general-option:before {
-      content: '\e902';
+      content: '\e30f';
     }
     .product-option:before {
-      content: '\e30f';
-      font-size: 23px;
+      content: '\f27b';
+      // font-size: 23px;
     }
     .trade-option:before {
       content: '\e907';

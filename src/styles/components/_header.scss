@@ -57,7 +57,7 @@ nav {
       @media #{$small-up} {
         //float: right;
         display: inline-block;
-        margin: 0 15px 0 0;
+        margin: 0 10px 0 0;
         vertical-align: middle;
         position: relative;
         &:last-child {
@@ -77,7 +77,7 @@ nav {
         }
       }
       @media #{$medium-up} {
-        margin: 0 30px 0 0;
+        margin: 0 19px 0 0;
       }
     }
     .nav-glow {
@@ -94,14 +94,14 @@ nav {
         display: none;
       }
       @media #{$small-up} {
-        width: 18%;
+        width: 16%;
         position: absolute;
         bottom: -31%;
         left: 0;
       }
       @media #{$medium-up} {
         width: 17%;
-        bottom: -70%;
+        bottom: -62%;
       }
     }
     .nav-story {
@@ -123,7 +123,7 @@ nav {
         }
       }
       @media #{$small-only} {
-        width: 12.5%;
+        width: 12%;
       }
     }
     .nav-classic {
@@ -149,16 +149,16 @@ nav {
       }
     }
     .nav-movers {
-      display: none;
-      // @media #{$xsmall-only} {
-      //   a img {
-      //     display: block;
-      //     margin: 0 auto;
-      //   }
-      // }
-      // @media #{$small-only} {
-      //   width: 11%;
-      // }
+      //display: none;
+      @media #{$xsmall-only} {
+        a img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      @media #{$small-only} {
+        width: 22%;
+      }
     }
     .nav-liaise {
       @media #{$xsmall-only} {
@@ -168,7 +168,7 @@ nav {
         }
       }
       @media #{$small-only} {
-        width: 10.5%;
+        width: 10%;
       }
     }
 

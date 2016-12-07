@@ -66,6 +66,7 @@ var leavebottledesc = (function(){
 });
 
 
+
 // var lightflicker = (function () {
 //   var lightnumber = 4000 + Math.floor(Math.random() * 8000);
 //   $("#home .bottle-glow, #home .bottle-shadow").hide();
@@ -137,7 +138,7 @@ $(document).ready(function(){
     return false;
   });
 
-  if ($(window).width() > 720 && $("#home").length) { // not mobile and on the homepage
+  if ($(window).width() > 720 && $("#home").length || $(window).width() > 720 && $("#movers").length) { // not mobile and on the homepage
     //lightflicker();
     new WOW().init();
 
@@ -157,7 +158,7 @@ $(document).ready(function(){
     });
     sprite1.play();
 
-    var element2 = document.querySelector('#finest-ingredients .sprite');
+    var element2 = document.querySelector('.content-sprite.sprite');
     var sprite2 = new Motio(element2, {
         fps: 12,
         frames: 18

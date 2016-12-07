@@ -1,0 +1,64 @@
+{% extends "layout.twig" %}
+
+{% block meta %}
+  <meta property="og:title" content="Concoctionarium - Bickford and Sons" />
+  <meta name="description" content="Inspired by original beverages created almost 150 years ago, Bickford and Sons’ premium range of classic recipes are proudly crafted in Australia from natural ingredients just as they always have been." />
+  <meta property="og:description" content="Inspired by original beverages created almost 150 years ago, Bickford and Sons’ premium range of classic recipes are proudly crafted in Australia from natural ingredients just as they always have been." />
+{% endblock %}
+
+{% block bodyClass "cocktail" %}
+
+
+{% block content %}
+
+  <section id="cocktail">
+    <div class="row">
+
+      <div class="small-7 column cocktail-image-container">
+
+          {% if app.cocktail.video is not defined %}
+            <div class="cocktail-image">
+              <img class="" src="/images/movers/cocktails/{{ app.cocktail.image }}">
+            </div>
+          {% endif %}
+          {% if app.cocktail.video is defined %}
+            <div class="cocktail-video">
+
+<!--               <video controls>
+                <source src="/video/{{ app.cocktail.video }}.mp4" type="video/mp4">
+              </video>
+ -->
+              <video id="my-video" class="video-js vjs-16-9 vjs-big-play-centered" controls preload="auto" data-setup="{'fluid': true}">
+                <source src="/video/{{ app.cocktail.video }}.mp4" type='video/mp4'>
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a web browser that
+                  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+              </video>
+            </div>
+          {% endif %}
+
+      </div>
+      <div class="small-5 column">
+        <div class="cocktail-details">
+          <a href="{{ url('concoctionarium') }}#cocktails">Back to recipes</a>
+          <h1>{{ app.cocktail.title }}</h1>
+          <p>Glassware: {{ app.cocktail.glassware }}</p>
+          <ul>
+            {% for ingredient in app.cocktail.ingredients %}
+              <li>{{ ingredient }}</li>
+            {% endfor %}
+          </ul>
+          <p>{{ app.cocktail.method }}</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}

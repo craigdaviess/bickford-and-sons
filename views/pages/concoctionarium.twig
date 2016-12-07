@@ -1,0 +1,232 @@
+{% extends "layout.twig" %}
+
+{% block meta %}
+  <meta property="og:title" content="Movers &amp; Shakers - Bickford and Sons" />
+  <meta name="description" content="Inspired by original beverages created almost 150 years ago, Bickford and Sons’ premium range of classic recipes are proudly crafted in Australia from natural ingredients just as they always have been." />
+  <meta property="og:description" content="Inspired by original beverages created almost 150 years ago, Bickford and Sons’ premium range of classic recipes are proudly crafted in Australia from natural ingredients just as they always have been." />
+{% endblock %}
+
+{% block bodyClass "movers" %}
+
+
+{% block content %}
+
+  <section id="movers">
+    <div class="movers-header">
+
+      <!-- <div id="sprite" class="content-sprite sprite"></div> -->
+      <div class="header-content">
+        <h1>Welcome to our Concoctionarium!</h1>
+        <p>Here you will find a tempting array of fine creations to whet the appetite and delight the tastebuds. Our passion for invention has resulted in some splendid concoctions that are verging on liquid genius if we do say so ourselves - from timeless classics with a Bickford and Sons tweak to inspired pieces of mixing mastery, we have a concoction to raise the spirits!</p>
+        <a href="#cocktails" data-link="#cocktails" class="down-link scroll"></a>
+      </div>
+
+    </div>
+
+    <div id="cocktails" class="cocktail-container">
+
+      <div class="filters">
+        <div class="row">
+          <a class="mobile-filter">Filter</a>
+
+          <ul class="text-filters filter-button-group">
+            <li class="filter-heading">
+              Filter by:
+            </li>
+            <li class="filter" data-filter=".mocktail-data">
+              Mocktail
+            </li>
+            <li class="filter" data-filter=".gin-data">
+              Gin
+            </li>
+            <li class="filter" data-filter=".liqueur-data">
+              Liqueur
+            </li>
+            <li class="filter" data-filter=".rum-data">
+              Rum
+            </li>
+            <li class="filter" data-filter=".tequila-data">
+              Tequila
+            </li>
+            <li class="filter" data-filter=".vodka-data">
+              Vodka
+            </li>
+            <li class="filter" data-filter=".whiskey-data">
+              Whiskey
+            </li>
+          </ul>
+
+          <ul class="button-group filter-button-group">
+            <li class="" data-filter=".soda-water-data">
+                <div class="top-list"><img src="/images/movers/bottles/soda-mover.jpg"></div>
+                <div class="bottom-list">Soda Water</div>
+            </li>
+            <li class=""  data-filter=".tonic-water-data">
+                <div class="top-list"><img src="/images/movers/bottles/tonic-mover.jpg"></div>
+                <div class="bottom-list">Tonic Water</div>
+            </li>
+            <li class=""  data-filter=".bitter-lemon-data">
+                <div class="top-list"><img src="/images/movers/bottles/lemon-mover.jpg"></div>
+                <div class="bottom-list">Bitter Lemon</div>
+            </li>
+            <li class=""  data-filter=".ginger-ale-data">
+                <div class="top-list"><img src="/images/movers/bottles/ginger-mover.jpg"></div>
+                <div class="bottom-list">Ginger Ale</div>
+            </li>
+            <li class=""  data-filter=".apple-plum-data">
+                <div class="top-list"><img src="/images/movers/bottles/apple-mover.jpg"></div>
+                <div class="bottom-list">Apple with Davidson Plum</div>
+            </li>
+            <li class=""  data-filter=".lemon-myrtle-data">
+                <div class="top-list"><img src="/images/movers/bottles/lemonmyrtle-mover.jpg"></div>
+                <div class="bottom-list">Lemon with Lemon Myrtle</div>
+            </li>
+            <li class=""  data-filter=".grape-hibiscus-data">
+                <div class="top-list"><img src="/images/movers/bottles/redgrape-mover.jpg"></div>
+                <div class="bottom-list">Red Grape with Hibiscus</div>
+            </li>
+            <li class=""  data-filter=".wild-lime-data">
+                <div class="top-list"><img src="/images/movers/bottles/wildlime-mover.jpg"></div>
+                <div class="bottom-list">Pear with Wild Lime</div>
+            </li>
+          </ul>
+          <a class="clear-filter">Clear filter</a>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <ul class="thumbnail-list grid">
+
+          <li class="grid-item soda-water-data rum-data">
+            <a href="{{ url('cocktail', {slug: 'mojito'}) }}"><img src="/images/movers/cocktails/mojito.jpg">Mojito</a>
+          </li>
+          <li class="grid-item tonic-water-data liqueur-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'french-gin-and-tonic'}) }}"><img src="/images/movers/cocktails/french-gin-and-tonic.jpg">French Gin and Tonic</a>
+          </li>
+          <li class="grid-item soda-water-data liqueur-data vodka-data">
+            <a href="{{ url('cocktail', {slug: 'strawberry-breezer'}) }}"><img src="/images/movers/cocktails/strawberry-breezer.jpg">Strawberry Breezer</a>
+          </li>
+          <li class="grid-item soda-water-data liqueur-data">
+            <a href="{{ url('cocktail', {slug: 'summer-rose'}) }}"><img src="/images/movers/cocktails/summer-rose.jpg">Summer Rose</a>
+          </li>
+          <li class="grid-item tonic-water-data liqueur-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'melon-soda'}) }}"><img src="/images/movers/cocktails/melon-soda.jpg">Melon Soda</a>
+          </li>
+          <li class="grid-item tonic-water-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'gin-and-tonic'}) }}"><img src="/images/movers/cocktails/gin-and-tonic.jpg">Gin &amp; Tonic</a>
+          </li>
+          <li class="grid-item soda-water-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'tom-collins'}) }}"><img src="/images/movers/cocktails/tom-collins.jpg">Tom Collins</a>
+          </li>
+          <li class="grid-item soda-water-data vodka-data">
+            <a href="{{ url('cocktail', {slug: 'caprioska'}) }}"><img src="/images/movers/cocktails/caprioska.jpg">Caprioska</a>
+          </li>
+          <li class="grid-item ginger-ale-data liqueur-data rum-data">
+            <a href="{{ url('cocktail', {slug: 'blue-mule'}) }}"><img src="/images/movers/cocktails/blue-mule.jpg">Blue Mule</a>
+          </li>
+          <li class="grid-item bitter-lemon-data liqueur-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'blue-steel'}) }}"><img src="/images/movers/cocktails/blue-steel.jpg">Blue Steel</a>
+          </li>
+          <li class="grid-item soda-water-data liqueur-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'strawberry-and-basil-collins'}) }}"><img src="/images/movers/cocktails/strawberry-and-basil-collins.jpg">Strawberry &amp; Basil Collins</a>
+          </li>
+          <li class="grid-item bitter-lemon-data liqueur-data">
+            <a href="{{ url('cocktail', {slug: 'ready-to-go'}) }}"><img src="/images/movers/cocktails/ready-to-go.jpg">Ready to Go</a>
+          </li>
+          <li class="grid-item soda-water-data liqueur-data">
+            <a href="{{ url('cocktail', {slug: 'peach-sangria'}) }}"><img src="/images/movers/cocktails/peach-sangria.jpg">Peach Sangria</a>
+          </li>
+          <li class="grid-item apple-plum-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'damson-in-distress'}) }}"><img src="/images/movers/cocktails/damson-in-distress.jpg">Damson in Distress</a>
+          </li>
+          <li class="grid-item lemon-myrtle-data rum-data">
+            <a href="{{ url('cocktail', {slug: 'myrtle-beach'}) }}"><img src="/images/movers/cocktails/myrtle-beach.jpg">Myrtle Beach</a>
+          </li>
+          <li class="grid-item grape-hibiscus-data tequila-data">
+            <a href="{{ url('cocktail', {slug: 'the-grapes-of-wrath'}) }}"><img src="/images/movers/cocktails/the-grapes-of-wrath.jpg">The Grapes of Wrath</a>
+          </li>
+          <li class="grid-item wild-lime-data rum-data">
+            <a href="{{ url('cocktail', {slug: 'where-the-wild-things-roam'}) }}"><img src="/images/movers/cocktails/where-the-wild-things-roam.jpg">Where the Wild Things Roam</a>
+          </li>
+          <li class="grid-item lemon-myrtle-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'garden-of-eden'}) }}"><img src="/images/movers/cocktails/garden-of-eden.jpg">Garden of Eden</a>
+          </li>
+          <li class="grid-item wild-lime-data tequila-data">
+            <a href="{{ url('cocktail', {slug: 'the-perfect-pear'}) }}"><img src="/images/movers/cocktails/the-perfect-pear.jpg">The Perfect Pear</a>
+          </li>
+          <li class="grid-item lemon-myrtle-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'lazy-afternoon'}) }}"><img src="/images/movers/cocktails/lazy-afternoon.jpg">Lazy Afternoon</a>
+          </li>
+          <li class="grid-item grape-hibiscus-data vodka-data">
+            <a href="{{ url('cocktail', {slug: 'pink-flamingo'}) }}"><img src="/images/movers/cocktails/pink-flamingo.jpg">Pink Flamingo</a>
+          </li>
+          <li class="grid-item wild-lime-data vodka-data">
+            <a href="{{ url('cocktail', {slug: 'sweet-calypso'}) }}"><img src="/images/movers/cocktails/sweet-calypso.jpg">Sweet Calypso</a>
+          </li>
+          <li class="grid-item apple-plum-data vodka-data">
+            <a href="{{ url('cocktail', {slug: 'plum-delicious'}) }}"><img src="/images/movers/cocktails/plum-delicious.jpg">Plum Delicious</a>
+          </li>
+          <li class="grid-item grape-hibiscus-data mocktail-data">
+            <a href="{{ url('cocktail', {slug: 'it-must-be-summer'}) }}"><img src="/images/movers/cocktails/it-must-be-summer.jpg">It Must be Summer<img class="mocktail" src="/images/movers/no-alc.png"></a>
+          </li>
+          <li class="grid-item wild-lime-data mocktail-data">
+            <a href="{{ url('cocktail', {slug: 'pear-blueberry-highball'}) }}"><img src="/images/movers/cocktails/pear-blueberry-highball.jpg">Pear and Blueberry Highball<img class="mocktail" src="/images/movers/no-alc.png"></a>
+          </li>
+          <li class="grid-item lemon-myrtle-data mocktail-data">
+            <a href="{{ url('cocktail', {slug: 'lemon-myrtle-mint-spritz'}) }}"><img src="/images/movers/cocktails/lemon-myrtle-mint-spritz.jpg">Lemon Myrtle and Mint Spritz<img class="mocktail" src="/images/movers/no-alc.png"></a>
+          </li>
+          <li class="grid-item apple-plum-data mocktail-data">
+            <a href="{{ url('cocktail', {slug: 'plum-superberry-sling'}) }}"><img src="/images/movers/cocktails/plum-superberry-sling.jpg">Plum and Superberry Sling<img class="mocktail" src="/images/movers/no-alc.png"></a>
+          </li>
+          <li class="grid-item apple-plum-data mocktail-data">
+            <a href="{{ url('cocktail', {slug: 'apricot-apple-fizz'}) }}"><img src="/images/movers/cocktails/apricot-apple-fizz.jpg">Apricot Apple Fizz<img class="mocktail" src="/images/movers/no-alc.png"></a>
+          </li>
+          <li class="grid-item ginger-ale-data liqueur-data">
+            <a href="{{ url('cocktail', {slug: 'jungle-punch'}) }}"><img src="/images/movers/cocktails/jungle-punch.jpg">Jungle Punch</a>
+          </li>
+          <li class="grid-item tonic-water-data whiskey-data">
+            <a href="{{ url('cocktail', {slug: 'texas-tea'}) }}"><img src="/images/movers/cocktails/texas-tea.jpg">Texas Tea</a>
+          </li>
+          <li class="grid-item bitter-lemon-data tequila-data">
+            <a href="{{ url('cocktail', {slug: 'bittersweet-symphony'}) }}"><img src="/images/movers/cocktails/bittersweet-symphony.jpg?2">Bittersweet Symphony</a>
+          </li>
+          <li class="grid-item tonic-water-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'catalonia-cocktail'}) }}"><img src="/images/movers/cocktails/catalonia-cocktail.jpg">Catalonia Cocktail</a>
+          </li>
+          <li class="grid-item soda-water-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'summer-of-love'}) }}"><img src="/images/movers/cocktails/summer-of-love.jpg">Summer of Love</a>
+          </li>
+          <li class="grid-item ginger-ale-data whiskey-data">
+            <a href="{{ url('cocktail', {slug: 'buckaroo-highball'}) }}"><img src="/images/movers/cocktails/buckaroo-highball.jpg">Buckaroo Highball</a>
+          </li>
+          <li class="grid-item soda-water-data whiskey-data">
+            <a href="{{ url('cocktail', {slug: 'maple-and-pear-fizz'}) }}"><img src="/images/movers/cocktails/maple-and-pear-fizz.jpg">Maple and Pear Fizz</a>
+          </li>
+          <li class="grid-item bitter-lemon-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'nineteenth-century-fizz'}) }}"><img src="/images/movers/cocktails/nineteenth-century-fizz.jpg">19th Century Fizz</a>
+          </li>
+          <li class="grid-item ginger-ale-data whiskey-data">
+            <a href="{{ url('cocktail', {slug: 'honey-ginger-lady'}) }}"><img src="/images/movers/cocktails/honey-ginger-lady.jpg">Honey Ginger Lady</a>
+          </li>
+          <li class="grid-item bitter-lemon-data tequila-data">
+            <a href="{{ url('cocktail', {slug: 'el-capeador'}) }}"><img src="/images/movers/cocktails/el-capeador.jpg">El Capeador</a>
+          </li>
+          <li class="grid-item ginger-ale-data whiskey-data">
+            <a href="{{ url('cocktail', {slug: 'horses-neck'}) }}"><img src="/images/movers/cocktails/horses-neck.jpg">Horse's Neck</a>
+          </li>
+          <li class="grid-item tonic-water-data gin-data">
+            <a href="{{ url('cocktail', {slug: 'raspberry-blackjack'}) }}"><img src="/images/movers/cocktails/raspberry-blackjack.jpg">Raspberry Blackjack</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </section>
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}

@@ -9,16 +9,18 @@ var enquirySet = function(){
 
 
   if (enquirySelection.hasClass("general-option") || enquirySelection.val() == "General Enquiry") {
-    $(".form_street, .form_suburb, .form_state").addClass("hide-item");
+    $(".form_street, .form_suburb, .form_state, .form_product, .form_company").addClass("hide-item");
     $("#enquiry-type").val("General Enquiry"); // needed for pre selection
   }
-  if (enquirySelection.hasClass("product-option") || enquirySelection.val() == "Product Issue") {
-    $(".form_street, .form_suburb, .form_state").removeClass("hide-item");
+  if (enquirySelection.hasClass("product-option") || enquirySelection.val() == "Product Feedback") {
+    $(".form_company").addClass("hide-item");
+    $(".form_street, .form_suburb, .form_state, .form_product").removeClass("hide-item");
     $(".form_street label, .form_suburb label, .form_state label").addClass("req");
-    $("#enquiry-type").val("Product Issue");
+    $("#enquiry-type").val("Product Feedback");
   }
   if (enquirySelection.hasClass("trade-option") || enquirySelection.val() == "Trade Enquiry") {
-    $(".form_street, .form_suburb, .form_state").removeClass("hide-item");
+    $(".form_product").addClass("hide-item");
+    $(".form_street, .form_suburb, .form_state, .form_company").removeClass("hide-item");
     $(".form_street label, .form_suburb label, .form_state label").removeClass("req");
     $("#enquiry-type").val("Trade Enquiry");
   }
@@ -63,7 +65,7 @@ $(".contact-form").submit(function(e){
         if ($(".form_subcheck").is(":checked")) {
           ga('send', 'event', 'eNews Subscribe', 'signup'); // let google analytics know
         }
-        $(".form_enquiry-type, .contact-form .form_name, .contact-form .form_email, .form_postcode, .form_phone, .form_street, .form_suburb, .form_state, .form_message, .contact-warning, .subcheck-container, .form_send").addClass("hide-item");
+        $(".form_enquiry-type, .contact-form .form_name, .contact-form .form_email, .form_product, .form_postcode, .form_phone, .form_company, .form_street, .form_suburb, .form_state, .form_message, .contact-warning, .subcheck-container, .form_send").addClass("hide-item");
         $(".enquiry-message, .pre-enquiry").removeClass('hide-item');
       }
       else {

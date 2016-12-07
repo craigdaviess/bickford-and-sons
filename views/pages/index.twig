@@ -68,7 +68,7 @@
 
       <img class="classic1-bottle" src="images/classic1/classic1-bottle.png">
       <img class="bottle-glow" src="images/bottle-glow.png">
-      <div id="sprite" class="sprite"></div>
+      <div id="sprite" class="content-sprite sprite"></div>
       <img class="cycle-man wow lightSpeedIn" data-wow-offset="800" src="images/classic1/cycle-man.png">
       <h2 class="classic1-header"><img src="images/classic1/classic1-header.png" alt="History delightfully repeated"></h2>
       <img class="classic1-subheader wow flipInX" data-wow-offset="200" src="images/classic1/classic1-subheader.png" alt="Raise your spirits with the new range of premium classic mixers.">
@@ -146,7 +146,7 @@
     </div>
   </section>
 
-<!--   <section id="movers-shakers">
+  <section id="movers-shakers">
     <div class="black-gradient"></div>
     <img class="slide-bg" src="images/movers/bar-bg.jpg">
 
@@ -158,7 +158,7 @@
           <p class="wow flipInX">The movers and shakers. The bartenders of Australia's great bars and pubs who proudly mix with Bickford and Sons classic premium mixers.</p>
           <p class="wow flipInX">Fancy a drink and a story? A concoction and a conversation? Great drinks mixed well are a recipe for a great story indeed.</p>
           <p class="wow flipInX">Here are some great recipes for you to enjoy while creating your next great story.</p>
-          <a class="view-recipes wow flipInX" href="movers-and-shakers"><img src="images/movers/view-recipes.png" alt="View recipes"></a>
+          <a class="view-recipes wow flipInX" href="concoctionarium"><img src="images/movers/view-recipes.png" alt="View recipes"></a>
         </div>
       </div>
 
@@ -169,7 +169,7 @@
       <a class="down-arrow scroll" data-link="#liaise"><img src="images/down-arrow.png"></a>
 
     </div>
-  </section> -->
+  </section>
 
 
   <section id="liaise">
@@ -187,7 +187,7 @@
         <p class="enquiry-message small-12 column">Please select an enquiry type</p>
         <ul class="pre-enquiry">
           <li class="pre-enquiry-option general-option">I have a general enquiry</li>
-          <li class="pre-enquiry-option product-option">I have a product enquiry</li>
+          <li class="pre-enquiry-option product-option">I have product feedback</li>
           <li class="pre-enquiry-option trade-option">I have a trade enquiry</li>
         </ul>
         <div class="form_enquiry-type hide-item form-item small-12 column">
@@ -195,9 +195,14 @@
           <select id="enquiry-type" name="enquiry-type" class="form-control small-4 column end">
             <option value="- - -" selected="true" disabled="disabled">- - -</option>
             <option value="General Enquiry">General Enquiry</option>
-            <option value="Product Issue">Product Enquiry</option>
+            <option value="Product Feedback">Product Feedback</option>
             <option value="Trade Enquiry">Trade Enquiry</option>
           </select>
+          <small class="form-error"></small>
+        </div>
+        <div class="form_product hide-item form-item medium-12 column">
+          <label class="req" for="product">Product</label>
+          <input type="text" id="product" name="product" class="form-control" placeholder="Product Name">
           <small class="form-error"></small>
         </div>
         <div class="form_name hide-item form-item small-6 column">
@@ -218,6 +223,11 @@
         <div class="form_postcode hide-item form-item small-6 column">
           <label class="req" for="postcode">Postcode</label>
           <input type="text" id="postcode" name="postcode" class="form-control" placeholder="Your Postcode">
+          <small class="form-error"></small>
+        </div>
+        <div class="form_company hide-item form-item medium-12 column">
+          <label for="company">Company/Business</label>
+          <input type="text" id="company" name="company" class="form-control" placeholder="Your Company or Business Name">
           <small class="form-error"></small>
         </div>
         <div class="form_street hide-item form-item small-5 column">

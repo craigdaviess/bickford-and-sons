@@ -23,8 +23,8 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
 
     {% block stylesheets %}
-      <link href="/css/style.css?58" rel="stylesheet" />
-      <link href="/css/fonts.css?3" rel="stylesheet" />
+      <link href="/css/style.css?64" rel="stylesheet" />
+      <link href="/css/fonts.css?5" rel="stylesheet" />
       <link href="/css/animate.min.css" rel="stylesheet" />
     {% endblock %}
     <script src="/js/modernizr.js"></script>
@@ -34,7 +34,7 @@
 
     <div class="loading-screen">
       <div class="inner-bg"></div>
-      <div class="mobile-sprite"><img src="images/classic1/cycle-man.png"></div>
+      <div class="mobile-sprite"><img src="/images/classic1/cycle-man.png"></div>
       <div class="sprite"></div>
     </div>
 
@@ -50,9 +50,12 @@
     {% include 'footer/_footer-nav.twig' %}
 
     {% block javascripts %}
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.10/vue-router.min.js"></script>
-      <script src="/js/app.min.js?3"></script>
+      <script src='http://imagesloaded.desandro.com/imagesloaded.pkgd.js'></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js"></script>
+      <script src="/js/app.min.js?4"></script>
     {% endblock %}
 
   </body>

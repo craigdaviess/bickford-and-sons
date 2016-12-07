@@ -49,9 +49,24 @@ $app->post('/subscribe', function(Request $request) use($app) {
     return $app->json($return);
 });
 
-// $app->get('/movers-and-shakers', function() use($app) {
-//     return $app['twig']->render('pages/movers-and-shakers.twig');
-// })->bind('movers-and-shakers');
+$app->get('/concoctionarium', function() use($app) {
+    return $app['twig']->render('pages/concoctionarium.twig');
+})->bind('concoctionarium');
+// $app->get('/cocktail-node', function() use($app) {
+//     return $app['twig']->render('pages/cocktail-node.twig');
+// })->bind('cocktail-node');
+
+$app->get('/concoctionarium/{slug}', function($slug) use($app) {
+    $path = __DIR__ . "/recipes.json";
+    $json = json_decode(file_get_contents($path), true);
+    if (!isset($json[$slug])) {
+        $app->abort(404);
+    }
+
+    $app['cocktail'] = $json[$slug];
+
+    return $app['twig']->render('pages/cocktail-node.twig');
+})->bind('cocktail');
 
 
 $app->get('/terms-conditions', function() use($app) {
