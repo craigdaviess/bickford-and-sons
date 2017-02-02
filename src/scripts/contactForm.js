@@ -60,11 +60,13 @@ $(".contact-form").submit(function(e){
     success:function(response){
       $('#send').removeAttr("disabled");
       if (response.success) {
+        ga('send', 'event', 'Form Submitted', 'contact form'); // let google analytics know
+        if ($(".form_subcheck").is(":checked")) {
+          ga('send', 'event', 'eNews Subscribe', 'contact form'); // let google analytics know
+        }
+
         $('.contact-form').trigger("reset"); //reset the form
         swal("Success", "Thank you for your message, we will get back to you as soon as possible. We have sent a confirmation email to '"+response.email+"'.", "success");
-        if ($(".form_subcheck").is(":checked")) {
-          ga('send', 'event', 'eNews Subscribe', 'signup'); // let google analytics know
-        }
         $(".form_enquiry-type, .contact-form .form_name, .contact-form .form_email, .form_product, .form_postcode, .form_phone, .form_company, .form_street, .form_suburb, .form_state, .form_message, .contact-warning, .subcheck-container, .form_send").addClass("hide-item");
         $(".enquiry-message, .pre-enquiry").removeClass('hide-item');
       }
