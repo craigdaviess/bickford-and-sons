@@ -191,3 +191,8 @@ $(document).ready(function(){
   // });
 
 });
+
+
+$(".js-sippify-link").on('click', function(){
+    ga('send', 'event', 'Sippify Redirect', 'link clicked'); // let google analytics know
+});
