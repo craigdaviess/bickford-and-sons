@@ -46,7 +46,7 @@
 
 
 
-    <form id="foodland-form" class="small-12 column" method="post" action="/foodland">
+    <form id="foodland-form" class="small-12 column" method="post" action="/foodland" enctype="multipart/form-data">
 
       <div class="form_general">
         <small class="form-error"></small>
@@ -76,6 +76,11 @@
         <label class="req" for="place">Which bird appears in the Bickford and Sons label design?</label>
         <input type="text" id="place" name="place" class="form-control" placeholder="Your Answer">
         <small class="form-error"></small>
+      </div>
+
+      <div class="form-item small-12 column">
+        <label for="image_uploads">Upload an image of your receipt <span class="-color-red">- optional</span></label>
+        <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png">
       </div>
 
       <div class="form_fav form-item small-6 column">

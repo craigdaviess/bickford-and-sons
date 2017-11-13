@@ -7,6 +7,10 @@ class Foodland
 
   public function processFoodlandForm($app, $form) {
 
+    // $request = $app["request"];
+    // $image = $request->files->get("image_uploads");
+    // return ["success"=>$form->files->get()];
+
     if ($errors = $this->checkFormForErrors($form)) {
       return array('error' => $errors);
     }
@@ -46,7 +50,7 @@ class Foodland
     }
 
     if ($form['place'] == '') {
-      $errors['place'] = 'Please enter your place of purchase';
+      $errors['place'] = 'You must answer the question';
     }
 
     if ($form['date'] == '') {
@@ -56,7 +60,6 @@ class Foodland
     if (!isset($form['agree'])) {
       $errors['agree'] = 'You must agree to the terms and conditions';
     }
-
 
     if ($form['website'] != '') {
       $errors['website'] = '';
