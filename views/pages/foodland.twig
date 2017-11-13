@@ -80,22 +80,17 @@
 
       <div class="form_fav form-item small-6 column">
         <label for="type">Which is your favourite flavour?</label>
-        <div class="fav-option">
-          <input type="radio" class="form-control" name="fav" value="Red Grape">
-          <span class="radio-label">Red Grape &amp; Hibiscus</span>
-        </div>
-        <div class="fav-option">
-          <input type="radio" class="form-control" name="fav" value="Lemon">
-          <span class="radio-label">Lemon &amp; Lemon Myrtle</span>
-        </div>
-        <div class="fav-option">
-          <input type="radio" class="form-control" name="fav" value="Pear">
-          <span class="radio-label">Pear &amp; Wild Lime</span>
-        </div>
-        <div class="fav-option">
-          <input type="radio" class="form-control" name="fav" value="Apple">
-          <span class="radio-label">Apple &amp; Davidson Plum</span>
-        </div>
+        <select name="fav">
+          <option value="- - -" selected disabled>- - -</option>
+          <option value="Red Grape and Hibiscus">Red Grape &amp; Hibiscus</option>
+          <option value="Lemon and Lemon Myrtle">Lemon &amp; Lemon Myrtle</option>
+          <option value="Pear and Wild Lime">Pear &amp; Wild Lime</option>
+          <option value="Apple and Davidson Plum">Apple &amp; Davidson Plum</option>
+          <option value="Soda Water">Soda Water</option>
+          <option value="Tonic Water">Tonic Water</option>
+          <option value="Bitter Lemon">Bitter Lemon</option>
+          <option value="Ginger Ale">Ginger Ale</option>
+        </select>
         <small class="form-error"></small>
       </div>
 
