@@ -5,7 +5,7 @@ namespace Cobalt;
 class Foodland
 {
 
-  public function processFoodlandForm($app, $form) {
+  public function processFoodlandForm($app, $form, $file) {
 
     // $request = $app["request"];
     // $image = $request->files->get("image_uploads");
@@ -25,7 +25,15 @@ class Foodland
       $sweetness = $form['sweet'];
     }
 
-    $data = ['name' => $form['name'], 'email' => $form['email'], 'phone' => $form['phone'], 'place' => $form['place'], 'date' => $form['date'], 'fav' => $favouriteflavour, 'sweet' => $sweetness];
+    $filename = '';
+    if ($file !== null) {
+      $path = __DIR__ . '/uploads/';
+
+      $filename = time() . preg_replace('/[^a-zA-Z0-9_.-]/', '', $file->getClientOriginalName());
+      $file->move($path, $filename);
+    }
+
+    $data = ['name' => $form['name'], 'email' => $form['email'], 'phone' => $form['phone'], 'place' => $form['place'], 'date' => $form['date'], 'fav' => $favouriteflavour, 'sweet' => $sweetness, 'receipt' => $filename];
 
     $return = $this->foodlandData($app, $data);
 
@@ -91,8 +99,9 @@ class Foodland
       ':favouriteflavour' => $data['fav'],
       ':sweetness' => $data['sweet'],
       ':the_timestamp' => date('Y-m-d-G-i'),
+      ':receipt' => $data['receipt'],
     );
-    $insert = "INSERT INTO entries (name, email, phone, place_purchased, date_purchased, favouriteflavour, sweetness, the_timestamp) VALUES (:name, :email, :phone, :place_purchased, :date_purchased, :favouriteflavour, :sweetness, :the_timestamp)";
+    $insert = "INSERT INTO entries (name, email, phone, place_purchased, date_purchased, favouriteflavour, sweetness, the_timestamp, receipt) VALUES (:name, :email, :phone, :place_purchased, :date_purchased, :favouriteflavour, :sweetness, :the_timestamp, :receipt)";
     try {
       $app['db']->executeUpdate($insert, $values);
     } catch(Exception $e) {

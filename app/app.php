@@ -81,9 +81,10 @@ $app->get('/foodland', function() use($app) {
     return $app['twig']->render('pages/foodland.twig');
 })->bind('foodland');
 $app->post('/foodland', function(Request $request) use($app) {
+    $file = $request->files->get("image_uploads");
     $formValues = $request->request->all();
     $foodlandForm = new Foodland();
-    $return = $foodlandForm->processfoodlandForm($app, $formValues);
+    $return = $foodlandForm->processfoodlandForm($app, $formValues, $file);
     return $app->json($return);
 });
 

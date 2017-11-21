@@ -3,8 +3,18 @@
 $("#foodland-form").submit(function(e){
   e.preventDefault();
 
-  var formSerialize = $(this).serialize();
   var url = $(this).attr('action');
+
+  var formSerialize = new FormData(this);
+  var image = $('#image_uploads')[0].files[0];
+
+  if (image.size > (10 * 1024 * 1024)) {
+    $('#foodland-form .form_reciept .form-error').show();
+    $('#foodland-form .form_reciept .form-error').html('File size too big. Limit of 10MB.');
+    return;
+  }
+
+  formSerialize.append('image_uploads', image);
 
   //clear errors if any
   $('.form-error').each(function(){
@@ -19,6 +29,8 @@ $("#foodland-form").submit(function(e){
     url: url, //Where to make Ajax calls
     dataType:"json", // Data type, HTML, json etc.
     data: formSerialize, //Form variables
+    processData: false,
+    contentType: false,
     success:function(response){
       $('#send').removeAttr("disabled");
       if (response.success) {
