@@ -8,7 +8,7 @@ $("#foodland-form").submit(function(e){
   var formSerialize = new FormData(this);
   var image = $('#image_uploads')[0].files[0];
 
-  if (image.size > (10 * 1024 * 1024)) {
+  if (image && image.size > (10 * 1024 * 1024)) {
     $('#foodland-form .form_reciept .form-error').show();
     $('#foodland-form .form_reciept .form-error').html('File size too big. Limit of 10MB.');
     return;
