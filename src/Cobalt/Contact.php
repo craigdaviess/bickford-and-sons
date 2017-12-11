@@ -114,9 +114,6 @@ class Contact
       //This is the body in plain text for non-HTML mail clients
       $mail->AltBody = 'You need to view this email in HTML';
 
-      $mail->AddBCC("dale.turner@wheelandbarrow.com.au");
-
-
       $confirmmail = new \PHPMailer();
 
       $confirmmail->setFrom($this->noreply, $this->webtitle);
