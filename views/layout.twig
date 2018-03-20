@@ -1,55 +1,6 @@
 <!DOCTYPE html>
 <html class="{% block bodyClass "default" %}">
   <head>
-    <style>
-    
-      .home-dry {
-        @media #{$xsmall-only} {
-          display: none;
-        }
-        @media #{$small-up} {
-          position: absolute;
-          bottom: 0;
-          right: -13%;
-          width: 19%;
-          z-index: 3;
-        }
-        @media #{$large-up} {
-          right: -21%;
-          bottom: 10%;
-        }
-        @media #{$xlarge-up} {
-          bottom: 23.5%;
-        }
-      }
-      .dry-bottle {
-        transition: 0.2s;
-        @media #{$xsmall-only} {
-          display: none;
-        }
-        @media #{$small-up} {
-          position: absolute;
-          width: 12.5%;
-          bottom: 20%;
-          left: 54%;
-        }
-        @media #{$xlarge-up} {
-          width: 14.5%;
-        }
-      }
-      .dry-card {
-        @media #{$small-up} {
-          position: absolute;
-          width: 35%;
-          top: 43%;
-          left: 54%;
-          z-index: 3;
-          pointer-events:none
-        }
-      }
-
-    </style>
-
     <title>{% block title "" %}Bickford and Sons</title>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
